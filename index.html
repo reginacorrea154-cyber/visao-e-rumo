@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visão e Rumo</title>
+    <!-- Fontes modernas do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Imagem como fundo da página ocupando 100% do espaço */
+        body {
+            background-image: url('sua-imagem.jpg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Container principal no canto superior esquerdo para agrupar título e botões */
+        .top-left-container {
+            position: fixed;
+            top: 40px;
+            left: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaço entre o título e a linha de botões */
+            z-index: 10;
+        }
+
+        /* Título */
+        .title-text {
+            color: #e5e7eb; /* Cinza bem clarinho */
+            font-family: 'Montserrat', sans-serif; /* Fonte forte e geométrica */
+            font-size: 38px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombra para leitura */
+            text-transform: uppercase;
+        }
+
+        /* Container para colocar um botão ao lado do outro */
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            gap: 15px; /* Espaço entre os botões */
+        }
+
+        .action-btn {
+            position: relative;
+            text-decoration: none;
+            /* Cor verde ligeiramente mais escura que o fundo */
+            background: linear-gradient(135deg, #388e3c, #2e7d32);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #fef4a9; /* Amarelo bem suave e pastel */
+            
+            /* Botões diminuídos */
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Sombra para leitura */
+            white-space: nowrap; /* Evita quebra de linha no botão */
+        }
+
+        /* Tooltip Bem vindo(a)! */
+        .action-btn::after {
+            content: "Bem vindo(a)!";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #374151; /* Texto escuro para contrastar com o balão claro */
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            pointer-events: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            text-shadow: none; /* Remove a sombra amarela herdada */
+        }
+
+        .action-btn:hover::after {
+            opacity: 1;
+            visibility: visible;
+            top: -38px; /* Faz o balão flutuar para cima */
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            /* Gradiente inverte/escurece um pouco no hover */
+            background: linear-gradient(135deg, #2e7d32, #1b5e20);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4), 0 0 15px rgba(46, 125, 50, 0.5);
+            border-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .action-btn:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+            z-index: 2;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: #40e0d0;
+        }
+
+        @media (max-width: 600px) {
+            .top-left-container {
+                top: 20px;
+                left: 20px;
+            }
+            .title-text {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-left-container">
+        <div class="title-text">Visão e Rumo</div>
+        
+        <!-- Botões lado a lado, abaixo do título -->
+        <div class="buttons-container">
+            <a href="https://docs.google.com/document/d/1q9fLgiiUN0UbPF_fjH_pE5zo-Gq_Z3N3bPdOdWpBJWM/preview?tab=t.wjz5nzki8m9y" target="_blank" class="action-btn">RA | Mídias</a>
+            <a href="https://docs.google.com/document/d/SEU_LINK_NPS" target="_blank" class="action-btn">NPS</a>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Visão e Rumo | Contato: Regina Rosa
+    </footer>
+</body>
+</html>
