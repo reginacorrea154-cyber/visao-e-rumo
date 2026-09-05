@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco VR | Visão e Rumo</title>
+    <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+
+<header class="page-header">
+    <div class="page-title">💲 Banco VR <span>Fluxograma de Processos VR</span></div>
+    <a href="index.html" class="btn-voltar">← Voltar à tela inicial</a>
+</header>
+
+<div class="search-wrapper">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar por palavra-chave..." oninput="buscar()" autocomplete="off">
+        <span class="search-icon">🔍</span>
+    </div>
+    <div class="search-count" id="searchCount"></div>
+</div>
+
+<div class="content">
+
+    <div class="info-banner">
+        <span class="info-icon">🚀</span>
+        <span><strong>Cada detalhe conta.</strong> Uma análise minuciosa não apenas resolve problemas, mas também gera valor, fortalece relações e impulsiona resultados. 💚</span>
+    </div>
+
+    <!-- CRÉDITO DO TRABALHADOR -->
+    <div class="topic-section open" data-keywords="crédito trabalhador empréstimo fgts carteira assinada consignado">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">📋</span>
+            <span class="topic-title">Regras de Negócio — Crédito do Trabalhador</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p>O Crédito do Trabalhador é um empréstimo para quem tem carteira assinada.</p>
+            <ul>
+                <li><strong>O Pedido:</strong> A pessoa usa o aplicativo da Carteira de Trabalho para solicitar o empréstimo, sem precisar da autorização do empregador.</li>
+                <li><strong>A Garantia:</strong> Se a pessoa sair do emprego, o banco pode usar até 10% do FGTS e até 100% da multa do patrão para ajudar a pagar a dívida.</li>
+                <li><strong>Se faltar dinheiro:</strong> Se a dívida não acabar, o pagamento para de ser cobrado até a pessoa arrumar outro emprego com carteira assinada. Não pode haver juros de castigo nesse tempo.</li>
+                <li><strong>Demissão por justa causa:</strong> O FGTS fica trancado e é preciso conversar com o banco para resolver.</li>
+                <li><strong>Direitos garantidos:</strong> O dinheiro usado para pagar o banco não tira os outros direitos que a pessoa tem na hora de sair do emprego.</li>
+            </ul>
+            <p><strong>Base legal:</strong> Medida Provisória nº 1.292/2025 e alterações na Lei nº 10.820/2003. O Banco VR é autorizado pelo governo e segue a mesma lei federal de todos os outros bancos.</p>
+            <div><span class="tag">Crédito</span><span class="tag">FGTS</span><span class="tag">Empréstimo</span><span class="tag">Carteira Assinada</span></div>
+        </div>
+    </div>
+
+    <!-- EMPRÉSTIMO GERAL / CONSIGNADO -->
+    <div class="topic-section" data-keywords="empréstimo consignado cobrança anuidade service now squad financeiro">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">💳</span>
+            <span class="topic-title">Empréstimo Geral e Consignado</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Tipos de caso:</strong></p>
+            <ul>
+                <li>Consignado</li>
+                <li>Conta negócio</li>
+                <li>Cobrança de anuidade abusiva</li>
+            </ul>
+            <p><strong>O que fazer?</strong> Validar tipo de empréstimo → abrir chamado se cobrança indevida → <strong>Squad Financeiro Crédito PF</strong>.</p>
+            <div><span class="tag">Consignado</span><span class="tag">Anuidade</span><span class="tag">Squad Financeiro</span></div>
+        </div>
+    </div>
+
+    <!-- COBRANÇA INSISTENTE -->
+    <div class="topic-section" data-keywords="cobrança insistente parcela desconto indevido empréstimo sncore">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">📞</span>
+            <span class="topic-title">Cobrança Insistente / Desconto Indevido de Parcela</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O cliente reclama que obteve desconto indevido de parcela em empréstimo.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Verificar saldo no <strong>SnCore</strong>.</li>
+                <li>Abrir chamado em <strong>Service Now</strong> → Squad Financeiro Crédito PF.</li>
+            </ol>
+            <div><span class="tag">Cobrança</span><span class="tag">Parcela</span><span class="tag">SnCore</span></div>
+        </div>
+    </div>
+
+    <!-- BANCO NÃO REALIZOU ESTORNO -->
+    <div class="topic-section" data-keywords="estorno banco não realizou service now financeiro função">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">↩️</span>
+            <span class="topic-title">Banco Não Realizou Estorno</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Verificar se o cliente possui chamado aberto no <strong>ServiceNow</strong>.</li>
+                <li>Se possuir → enviar para o financeiro verificar na <em>Função*</em>.</li>
+                <li>Se não possuir chamado → abrir chamado e encaminhar para o financeiro realizar a análise.</li>
+            </ol>
+            <div class="script-box">
+                <div class="script-label">ℹ️ Nota</div>
+                <em>Função*</em> é uma ferramenta utilizada pela equipe do financeiro para averiguar a situação.
+            </div>
+            <div><span class="tag">Estorno</span><span class="tag">Financeiro</span><span class="tag">Service Now</span></div>
+        </div>
+    </div>
+
+    <!-- QUITAÇÃO DE EMPRÉSTIMO -->
+    <div class="topic-section" data-keywords="quitação empréstimo boleto baixa comprovação pagamento">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">✅</span>
+            <span class="topic-title">Comprovação de Quitação de Empréstimo</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O cliente efetuou a quitação do empréstimo mas ainda não foi dada baixa nos boletos, ou solicita comprovação de quitação.</p>
+            <p><strong>O que fazer?</strong> Abrir chamado no <strong>Service Now</strong> → Squad Financeiro Crédito PF.</p>
+            <div><span class="tag">Quitação</span><span class="tag">Boleto</span><span class="tag">Comprovação</span></div>
+        </div>
+    </div>
+
+    <div class="no-results" id="noResults">
+        <div style="font-size:40px;margin-bottom:10px;">🔍</div>
+        Nenhum resultado encontrado para a sua busca.
+    </div>
+</div>
+
+<footer>© 2026 Visão e Rumo | Grupo Elo</footer>
+
+<script>
+function toggle(header) { header.parentElement.classList.toggle('open'); }
+function buscar() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('.topic-section');
+    const noResults = document.getElementById('noResults');
+    let found = 0;
+    sections.forEach(s => {
+        const match = !query || (s.getAttribute('data-keywords')||'').includes(query) || s.innerText.toLowerCase().includes(query);
+        s.classList.toggle('hidden', !match);
+        if (match) { found++; if (query) s.classList.add('open'); }
+    });
+    document.getElementById('searchCount').textContent = query ? (found > 0 ? `${found} tópico(s) encontrado(s)` : '') : '';
+    noResults.style.display = (query && found === 0) ? 'block' : 'none';
+}
+</script>
+<script src="doc-sync.js"></script>
+</body>
+</html>

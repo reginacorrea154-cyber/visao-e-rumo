@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefícios | Visão e Rumo</title>
+    <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+
+<header class="page-header">
+    <div class="page-title">💳 Benefícios <span>Fluxograma de Processos VR</span></div>
+    <a href="index.html" class="btn-voltar">← Voltar à tela inicial</a>
+</header>
+
+<div class="search-wrapper">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar por palavra-chave..." oninput="buscar()" autocomplete="off">
+        <span class="search-icon">🔍</span>
+    </div>
+    <div class="search-count" id="searchCount"></div>
+</div>
+
+<div class="content">
+
+    <div class="info-banner">
+        <span class="info-icon">⭐</span>
+        <span><strong>A excelência começa nos detalhes.</strong> Cada chamado é uma oportunidade de fazer a diferença. Analise com atenção, investigue com cuidado e entregue soluções com confiança.</span>
+    </div>
+
+    <!-- ENTREGA DE CARTÕES -->
+    <div class="topic-section open" data-keywords="entrega cartão atraso rastrear logística power bi emissão">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">📦</span>
+            <span class="topic-title">Entrega de Cartões</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> Atraso na entrega de cartões.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Validar dados do cliente no sistema.</li>
+                <li>Analisar se já existe um chamado em aberto pelo mesmo motivo.</li>
+                <li>Validar status do cartão.</li>
+                <li>Rastrear no <strong>Power BI</strong> → se necessário abrir chamado para logística → Mobi/Flash/(logística).</li>
+                <li>Se não conseguimos entregar, abrir chamado: Ex: Mudou-se, ausente, nº não identificado, etc.</li>
+            </ol>
+            <div class="script-box">
+                <div class="script-label">⚠️ Obrigatório</div>
+                O envio de e-mail informativo e atualização de dados para área <strong>não é opcional, é OBRIGATÓRIO</strong>.<br>
+                📧 <strong>Atendimento Logística:</strong> atendimento.logistica@vr.com.br<br>
+                📧 <strong>Gestão de Cartões:</strong> GestaodeCartoes@vr.com.br
+            </div>
+            <div><span class="tag">Entrega</span><span class="tag">Power BI</span><span class="tag">Logística</span><span class="tag">SnCore</span></div>
+        </div>
+    </div>
+
+    <!-- BLOQUEIO / PERDA / ROUBO / REEMISSÃO -->
+    <div class="topic-section" data-keywords="bloqueio perda roubo reemissão segunda via sncore extraviado">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🔒</span>
+            <span class="topic-title">Bloqueio — Perda, Roubo e Reemissão</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <div class="script-box">
+                <div class="script-label">⚠️ Importante</div>
+                Não alteramos endereço de entrega de cartão. Em situações específicas acionamos o RH responsável e solicitamos autorização.
+            </div>
+            <p><strong>Quando ocorre?</strong> Cartão não recebido, perda, roubo, 2ª via de cartão, etc.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Validar dados do cliente.</li>
+                <li>Analisar se o cartão já está bloqueado:
+                    <ul>
+                        <li><strong>Se sim:</strong> verificar se há emissão de novo cartão e qual a data de remessa.</li>
+                        <li><strong>Se não:</strong> bloquear o cartão.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>O bloqueio é realizado no <strong>SNcore / Salesforce</strong>.</p>
+            <p><strong>No SNCore:</strong> Clicar em bloqueio → Em "Motivo" selecionar o tipo de bloqueio.</p>
+            <div class="script-box">
+                <div class="script-label">📝 Observação no campo</div>
+                Registre: ID RA e a área que solicitou o bloqueio.<br>
+                Ex: <em>"ID RA XXXXX - Bloqueio solicitado pela área de cartão"</em><br><br>
+                No campo <strong>responsável</strong> digitar o nome do solicitante da área.<br>
+                Ex: <em>"Angélica Cruz" — área de cartões, logística.</em>
+            </div>
+            <p>Cartão status <strong>"integrado"</strong> significa que o cliente não efetuou o desbloqueio. O cartão pode ter sido extraviado, ainda estar na fábrica ou ter sido bloqueado recentemente.</p>
+            <p>Para situações atípicas, geralmente selecionar a opção <strong>"Extraviado pela empresa"</strong>, pois gera re-emissão automática do cartão.</p>
+            <div><span class="tag">Bloqueio</span><span class="tag">SNcore</span><span class="tag">Salesforce</span><span class="tag">Reemissão</span></div>
+        </div>
+    </div>
+
+    <!-- DESLIGADOS -->
+    <div class="topic-section" data-keywords="desligado demissão saldo cartão bloqueado rescisão">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🚪</span>
+            <span class="topic-title">Desligados — Entrega de Cartão e Saldo</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O cliente informa que não trabalha mais na empresa e tem saldo liberado no cartão que não consegue utilizar (perdeu o cartão, solicitou segunda via e não recebeu, etc.).</p>
+            <p><strong>O que fazer?</strong> Validar comprovantes → abrir chamado em <strong>Service Now</strong> para cobrança/faturamento.</p>
+            <div class="script-box">
+                <div class="script-label">⚠️ Reemissão de Cartão — Atenção</div>
+                Em situações específicas, entrar em contato com o RH para confirmar se autorizam o envio do cartão diretamente para a residência do trabalhador. É importante esclarecer que, caso outro colaborador e/ou o próprio RH solicite a emissão de um novo cartão no mesmo período, o rastreamento (AR) poderá ser gerado em lote, impossibilitando o envio individual para a residência.
+            </div>
+            <div><span class="tag">Desligado</span><span class="tag">Saldo</span><span class="tag">Service Now</span></div>
+        </div>
+    </div>
+
+    <!-- PAGAMENTO POR APROXIMAÇÃO / STATUS CARTÃO -->
+    <div class="topic-section" data-keywords="pagamento aproximação falhando cartão status sncore">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">📡</span>
+            <span class="topic-title">Pagamento por Aproximação e Status do Cartão</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> Pagamento por aproximação falhando; empresa não existe mais; cartão com defeito.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Validar dados do cliente no sistema.</li>
+                <li>Analisar se já existe um chamado em aberto pelo mesmo motivo.</li>
+                <li>Validar status do cartão.</li>
+                <li>Consultar <strong>SnCore</strong> → se necessário abrir chamado em <strong>Service Now</strong>.</li>
+            </ol>
+            <ul>
+                <li>Se usado → abrir chamado para contabilidade/faturamento.</li>
+                <li>Saldo bloqueado/furto: abrir chamado em Service Now para desbloqueio ou reemissão.</li>
+            </ul>
+            <div><span class="tag">Aproximação</span><span class="tag">SnCore</span><span class="tag">Service Now</span></div>
+        </div>
+    </div>
+
+    <!-- EXPURGO -->
+    <div class="topic-section" data-keywords="expurgo reembolso saldo recolhido inatividade taxa 90 dias 24 meses">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">💸</span>
+            <span class="topic-title">Expurgo — Reembolso de Saldo Recolhido</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O expurgo do cartão ocorre após <strong>90 dias ou 24 meses</strong> de inatividade do usuário. Conforme as regras de negócio e a legislação vigente, é aplicada uma taxa de manutenção de <strong>R$12,00</strong>.</p>
+            <p><strong>Procedimento de Devolução:</strong></p>
+            <ul>
+                <li><strong>Abertura de Chamado:</strong> Abrir chamado no ServiceNow solicitando a devolução do valor ao trabalhador.</li>
+                <li><strong>Regra de Exclusividade:</strong> Essa devolução é permitida apenas <strong>uma única vez</strong>.</li>
+                <li><strong>Reincidência:</strong> Se o cartão ficar inativo novamente dentro dos prazos citados, o valor não será ressarcido.</li>
+            </ul>
+            <p><strong>O que fazer?</strong> Consultar SnCore → abrir chamado em <strong>Service Now</strong> para Squad contabilidade/faturamento.</p>
+            <div class="script-box">
+                <div class="script-label">⚠️ Atenção</div>
+                Sempre adicione o extrato (pode ser print do SnCore ou Salesforce).
+            </div>
+            <div><span class="tag">Expurgo</span><span class="tag">Reembolso</span><span class="tag">Inatividade</span><span class="tag">R$12,00</span></div>
+        </div>
+    </div>
+
+    <!-- CLONAGEM / FRAUDE / CONTESTAÇÃO -->
+    <div class="topic-section" data-keywords="clonagem fraude contestação compra desconhece valores">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🚨</span>
+            <span class="topic-title">Clonagem, Fraude e Contestação de Compra</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O cliente desconhece a compra, acredita que o cartão foi clonado, suspeita de fraude ou contesta valores.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Validar dados do cliente no sistema.</li>
+                <li>Solicitar ao cliente valores e datas das compras.</li>
+                <li>Analisar se já existe um chamado em aberto pelo mesmo motivo.</li>
+                <li>Validar status do cadastro.</li>
+                <li>Consultar SnCore → abrir chamado em <strong>Service Now</strong> para <em>Security — Prevenção a Fraudes</em>.</li>
+            </ol>
+            <div><span class="tag">Fraude</span><span class="tag">Clonagem</span><span class="tag">Contestação</span><span class="tag">Security</span></div>
+        </div>
+    </div>
+
+    <!-- EXCLUIR DADOS SUPERAPP -->
+    <div class="topic-section" data-keywords="excluir dados superapp cpf cadastro lgpd exclusão">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🗑️</span>
+            <span class="topic-title">Exclusão de Dados Pessoais no SuperApp (PF)</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> O cliente PF (CPF) solicita exclusão dos dados cadastrais do SuperApp.</p>
+            <p><strong>O que fazer?</strong></p>
+            <ol>
+                <li>Validar dados do cliente no sistema.</li>
+                <li>Analisar se já existe um chamado em aberto pelo mesmo motivo.</li>
+                <li>Validar status do cadastro.</li>
+                <li>Consultar SnCore → abrir chamado em <strong>Service Now</strong> → SQUAD Experiência Digital Trabalhador.</li>
+            </ol>
+            <div><span class="tag">LGPD</span><span class="tag">Exclusão</span><span class="tag">CPF</span><span class="tag">SuperApp</span></div>
+        </div>
+    </div>
+
+    <!-- CAIXA ECONÔMICA -->
+    <div class="topic-section" data-keywords="caixa econômica federal caixa cartão pré-pago moderação">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🏛️</span>
+            <span class="topic-title">Caixa Econômica — Redirecionamento</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Quando ocorre?</strong> Reclamação referente à Caixa Econômica — <strong>não atuamos</strong>, sempre solicitar moderação.</p>
+            <div class="script-box">
+                <div class="script-label">📞 Resposta Padrão</div>
+                Olá, boa tarde.<br>
+                O reclame não refere-se a VR Benefícios. Por gentileza, direcionar a reclamação para a empresa <strong>CAIXA CARTÕES PRÉ-PAGOS S.A — CNPJ: 39.459.331/0001-20</strong>.<br>
+                Obrigada.
+            </div>
+            <div><span class="tag">Caixa</span><span class="tag">Moderação</span><span class="tag">Redirecionamento</span></div>
+        </div>
+    </div>
+
+    <!-- DECRETO / ARRANJO ABERTO / PAT -->
+    <div class="topic-section" data-keywords="decreto pat mdr arranjo aberto taxas lei estabelecimento">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">📜</span>
+            <span class="topic-title">Decreto e Arranjo Aberto (PAT)</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <p><strong>Decreto nº 12.712/2025</strong> — suspensa em 25/02/2026. Refere-se às taxas.</p>
+            <p><strong>Arranjo aberto</strong> — refere-se à liberação de maquininhas para todas as bandeiras (também faz parte do decreto).</p>
+            <p>Quando não mencionar contestação de taxas, não enviar o texto padrão de decreto. Utilizar o texto que o jurídico encaminhar.</p>
+            <ul>
+                <li><strong>Decreto — Quando ocorre?</strong> O cliente questiona taxas empregadas à modalidade PAT. Seguir com texto padrão formulado pelo jurídico.</li>
+                <li><strong>Arranjo aberto:</strong> O cliente questiona a liberação de maquininhas para todas as bandeiras. Aguardar orientação e texto padrão.</li>
+            </ul>
+            <div class="script-box">
+                <div class="script-label">📋 Texto Padrão — Decreto</div>
+                Informamos que a liminar relacionada ao Decreto nº 12.712/2025 foi suspensa dia 25/02/2026. Com isso, o Decreto voltou a produzir efeitos em relação à VR.<br><br>
+                <strong>Produtos PAT</strong> – MDR 3,6% e Prazo de Recebíveis 15 dias – Seguindo nova legislação.<br>
+                <strong>Produtos Auxílio</strong> – Sem alterações nas condições comerciais – MDR 4,97% – Tarifa operacional R$10,90.
+            </div>
+            <div><span class="tag">Decreto</span><span class="tag">PAT</span><span class="tag">MDR</span><span class="tag">Arranjo Aberto</span></div>
+        </div>
+    </div>
+
+    <!-- ESTABELECIMENTO COMERCIAL -->
+    <div class="topic-section" data-keywords="estabelecimento comercial cnpj credenciamento antecipação repasse maquininha">
+        <div class="topic-header" onclick="toggle(this)">
+            <span class="topic-icon">🏪</span>
+            <span class="topic-title">Estabelecimento Comercial</span>
+            <span class="topic-toggle">▾</span>
+        </div>
+        <div class="topic-body">
+            <div class="script-box">
+                <div class="script-label">⚠️ Atenção</div>
+                CNPJ não localizado? Validar no site da Receita Federal: <strong>https://solucoes.receita.fazenda.gov.br/Servicos/cnpjreva/</strong><br>
+                Abertura de chamados para clientes Estabelecimentos: utilizar a fila <strong>EC</strong>.
+            </div>
+            <p><strong>Credenciamento — dados necessários:</strong></p>
+            <ul>
+                <li>Nome do representante legal, CPF, RG e data de nascimento.</li>
+                <li>Dados bancários: nome do banco, agência, conta e dígito.</li>
+                <li>Telefone, e-mail e endereço completo.</li>
+                <li>Produtos que deseja credenciar.</li>
+                <li>Maquininha e número de filiação para credenciamento.</li>
+            </ul>
+            <p><strong>Condições comerciais:</strong></p>
+            <ul>
+                <li>Produtos PAT – MDR 3,6% e Prazo de Recebíveis 15 dias.</li>
+                <li>Produtos Auxílio – MDR 4,97% – Tarifa operacional R$10,90 – Anuidade variável – Adesão R$89,90 em 4x.</li>
+            </ul>
+            <p><strong>Antecipação de Repasse:</strong> Sistema 7x1 (7 dias recebendo, taxa de R$30,00). Sem contrato: repasse 1x/mês após 28 dias.</p>
+            <div><span class="tag">Estabelecimento</span><span class="tag">CNPJ</span><span class="tag">Credenciamento</span><span class="tag">Antecipação</span></div>
+        </div>
+    </div>
+
+    <div class="no-results" id="noResults">
+        <div style="font-size:40px;margin-bottom:10px;">🔍</div>
+        Nenhum resultado encontrado para a sua busca.
+    </div>
+</div>
+
+<footer>© 2026 Visão e Rumo | Grupo Elo</footer>
+
+<script>
+function toggle(header) { header.parentElement.classList.toggle('open'); }
+function buscar() {
+    const query = document.getElementById('searchInput').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('.topic-section');
+    const noResults = document.getElementById('noResults');
+    let found = 0;
+    sections.forEach(s => {
+        const match = !query || (s.getAttribute('data-keywords')||'').includes(query) || s.innerText.toLowerCase().includes(query);
+        s.classList.toggle('hidden', !match);
+        if (match) { found++; if (query) s.classList.add('open'); }
+    });
+    document.getElementById('searchCount').textContent = query ? (found > 0 ? `${found} tópico(s) encontrado(s)` : '') : '';
+    noResults.style.display = (query && found === 0) ? 'block' : 'none';
+}
+</script>
+<script src="doc-sync.js"></script>
+</body>
+</html>
